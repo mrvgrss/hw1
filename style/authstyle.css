@@ -1,0 +1,71 @@
+body{
+    background-color: #f7f7f7;
+}
+#authlayout{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px 30px;
+    padding: 100px;
+    box-shadow: 1px 2px 1px 0 rgb(206, 203, 203);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#formauthlayout form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.rowinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.rowinput .forminput:first-child{
+    margin-right: 10px;
+}
+.forminput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.forminput input{
+    font-size: 15px;
+    line-height: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.forminput span{ 
+    text-align: center;
+    color: red;
+    font-size: 10px;
+    display: none;
+}
+.hideicon {
+    background-image: url("../media/hide.png");
+    background-size: cover;
+}
+.viewicon {
+    background-image: url("../media/visible.png");
+    background-size: cover;
+}
+.forminput .passwordview{
+    height: 20px;
+    position: absolute;
+    right: 0;
+    padding: 0 15px 0 5px;
+    margin: 0 5px 8px 0;
+}
+
+#submit{
+    border-radius: 13px;
+    color: white;
+    font-weight: bold;
+    background-color:  rgb(7, 40, 85);;
+}
