@@ -32,7 +32,7 @@ function checkCachedOfferts($conn, $origin, $destination, $departureDate, $retur
       bookedUserId IS NULL AND
       destination = '{$destination}' AND
       origin = '{$origin}' AND 
-      adults <= '{$adults}' AND
+      adults = '{$adults}' AND
       departureDate >= '{$departureDate}' AND
       last_ticketing_datetime >= '{$departureDate}'
       ORDER BY date_diff ASC

@@ -1,5 +1,9 @@
-#mybookings{
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 100px;
     background-color:bisque;
+}
+#mybookings{
     display: none;
 }
 #nobookfound{

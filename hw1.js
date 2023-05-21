@@ -87,7 +87,8 @@ function onJsonFlightOffert(json){
         offert_doc.querySelector('.flight-end-airport').textContent = info.destination;
 
         offert_doc.querySelector('.flight-duration').textContent = formatDuration(flights[0]["duration"]);
-        offert_doc.querySelector('.flight-stopovers').textContent = "(" + flights[0]["segments"].length + "scali)";
+        const stopovers = flights[0]["segments"].length - 1;
+        offert_doc.querySelector('.flight-stopovers').textContent = "(" + stopovers + "scali)";
         offert_doc.querySelector('.flight-start-hour').textContent = formatDateAndTime(flights[0]["segments"][0]["departure_datetime"]).time;
         offert_doc.querySelector('.flight-end-hour').textContent = formatDateAndTime(flights[0]["segments"][flights[0]["segments"].length - 1]["arrival_datetime"]).time;
 
