@@ -27,6 +27,7 @@ function checkCode($conn, $term){
 }
 function checkCachedOfferts($conn, $origin, $destination, $departureDate, $returnDate, $adults){
     $offerts = array();
+    // returnDate is not used on cached offerts search.
     $query = "SELECT *, DATEDIFF(departureDate, '{$departureDate}') AS date_diff FROM FLIGHT_OFFERTS WHERE 
       bookedUserId IS NULL AND
       destination = '{$destination}' AND
@@ -171,6 +172,8 @@ if(empty($offerts)){
         $offerts = checkCachedOfferts($conn, $origin_code, $destination_code, $departureDate, $returnDate, $adults);
     }
 }
+
+mysqli_close($conn);
 
 echo json_encode($offerts);
 

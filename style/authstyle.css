@@ -66,6 +66,7 @@ body{
 #submit{
     border-radius: 13px;
     color: white;
+    cursor: pointer;
     font-weight: bold;
     background-color:  rgb(7, 40, 85);;
 }

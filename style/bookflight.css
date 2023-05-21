@@ -75,6 +75,7 @@ h1{
     border-radius: 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 #backHome{
     border: 2px solid black;

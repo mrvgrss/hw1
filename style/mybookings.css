@@ -1,0 +1,31 @@
+#mybookings{
+    background-color:bisque;
+    display: none;
+}
+#nobookfound{
+    display: none;
+}
+h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.book-flight{
+    color: white;
+    background-color: rgb(7, 40, 85);
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+.itineraries{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#returnHomepage{
+    position: relative;
+}
+#returnHomepage div{
+    position: absolute;
+    right: 0;
+}

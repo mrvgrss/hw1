@@ -61,8 +61,5 @@ function getFlightOfferts($accessToken, $tokenType, $originLocationCode = "ROM",
 
     return $result;
 }
-
-$tokenInfo = getToken();
-
-
+// $tokenInfo = getToken(); debug
 ?>

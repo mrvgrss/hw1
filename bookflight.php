@@ -8,7 +8,6 @@ if(!isset($_SESSION["email"])){
     header("Location: signup.php");
     exit;
 }
-
 if(!isset($_GET["offertId"])){
     header("Location: home.php");
     exit;
@@ -37,6 +36,9 @@ if(mysqli_num_rows($res) > 0){
     echo json_encode($response);
     exit;
 }
+
+mysqli_free_result($res);
+mysqli_close($conn);
 
 echo json_encode($response);
 

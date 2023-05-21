@@ -17,7 +17,7 @@ session_start();
         <script src="./script/menu.js" defer></script>
     </head>
     <body>
-        <div>
+        <div id="menufixed">
             <nav>
                 <div class="title-style">
                     <span>VIAGGIAREIT</span>
@@ -28,7 +28,7 @@ session_start();
                     <a href="#voli">Voli</a>
                     <a href="#pacchetti_vacanze">Pacchetti vacanze</a>
                     <a href="#hotel">Hotel</a>
-                    <a href="#blog">Blog</a>
+                <!--   <a href="#blog">Blog</a> -->
                 </div>
                 <div id="user-info">
                     <?php
@@ -38,7 +38,7 @@ session_start();
                             <span>' . $_SESSION["name"] . '</span>
                             </div>' ;
                         }else{
-                            echo '<div><a href="./signup.php">Login/Signup</a></div>';
+                            echo '<a href="./signup.php">Registrati Ora</a>';
                         }
                     ?>
                 </div>

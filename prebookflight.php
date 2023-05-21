@@ -7,7 +7,6 @@ if(!isset($_SESSION["email"])){
     header("Location: signup.php");
     exit;
 }
-
 if(!isset($_GET["offertId"])){
     header("Location: home.php");
     exit;
@@ -23,7 +22,7 @@ $res = mysqli_query($conn, $query);
 $offert = null;
 if(mysqli_num_rows($res) > 0){
     $row = mysqli_fetch_object($res);
-    if($row->bookedUserId == null && strtotime( $row->last_ticketing_datetime) >= strtotime(date('Y-m-d'))){
+    if($row->bookedUserId == null && strtotime($row->last_ticketing_datetime) >= strtotime(date('Y-m-d'))){
         $offert = get_object_vars($row);
     }else{
         // redirect home if offert is already booked or too late for book;
@@ -41,6 +40,8 @@ if(mysqli_num_rows($res) > 0){
         <title>Book flight</title>
         <link rel="stylesheet" type="text/css" href="./style/bookflight.css">
         <script src="./script/bookflight.js" defer></script>
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>
